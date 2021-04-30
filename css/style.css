@@ -830,6 +830,7 @@ textarea {
 .all-cases .inner ul li a:hover {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 .all-cases.active {
   opacity: 1;
@@ -1134,6 +1135,11 @@ textarea {
   font-weight: 800;
   color: #fff;
   margin-bottom: 30px;
+}
+.video-hero .inner span:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+  cursor: pointer;
 }
 .video-hero .inner a {
   font-size: 19px;
@@ -2235,10 +2241,18 @@ textarea {
 .clients ul li {
   width: 33.33333%;
   margin: 0;
-  padding: 40px;
+  padding: 20px;
   list-style: none;
   border-left: 1px solid #eee;
   border-top: 1px solid #eee;
+  text-align: center;
+}
+.clients ul li a {
+  font-size: 2rem;
+}
+.clients ul li a:hover {
+  font-size: 2.5rem;
+  filter: contrast(0.5);
 }
 
 /* CONTACT */
@@ -2355,7 +2369,13 @@ textarea {
   height: 100%;
   border: none;
 }
-
+/* copyButton */
+.copyBtn {
+  height: 58px;
+}
+#myAdd {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
 /* FOOTER */
 .footer {
   width: 100%;

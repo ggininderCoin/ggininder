@@ -140,7 +140,7 @@
 
 
         // EQUALIZER TOGGLE
-        var source = "audio/audio.mp3";
+        var source = "audio/bensound-creativeminds.mp3";
         var audio = new Audio(); // use the constructor in JavaScript, just easier that way
         audio.addEventListener("load", function () {
             audio.play();
@@ -401,6 +401,5 @@
     $(window).load(function () {
         $("body").addClass("page-loaded");
     });
-
 
 })(jQuery);
