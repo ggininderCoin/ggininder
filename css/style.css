@@ -2375,6 +2375,7 @@ textarea {
 }
 #myAdd {
   border-radius: 0.25rem 0 0 0.25rem;
+  width: 80%;
 }
 /* FOOTER */
 .footer {
@@ -2451,7 +2452,10 @@ textarea {
   text-decoration: none;
   color: #75dab4;
 }
-
+.smallWord {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
 /* RESPONSIVE TABLET FIXES */
 @media only screen and (max-width: 991px),
   only screen and (max-device-width: 991px) {
