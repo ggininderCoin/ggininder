@@ -2255,8 +2255,22 @@ textarea {
 .clients ul li a {
   font-size: 2rem;
 }
-.clients ul li a:hover {
+/* .clients ul li a:hover {
   font-size: 2.5rem;
+  filter: contrast(0.5);
+} */
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.iconWrap a {
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+.iconWrap a:hover {
+  font-size: 3rem;
   filter: contrast(0.5);
 }
 
