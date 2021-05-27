@@ -61,9 +61,9 @@
   <div class="inner">
     <h5>Community</h5>
     <ul>
-      <li><a href="https://twitter.com/ggininderbsc"><i class="fab fa-twitter"></i></a></li>
-      <li><p href="https://www.reddit.com/r/GGinindertoken/"><i class="fab fa-reddit"></i></p></li>
-      <li><a href="https://t.me/joredditinchat/TRBISC23wI03YWU1"><i class="fab fa-telegram"></i></a></li>
+      <li><p class="link" onclick="openLink('twitter')"><i class="fab fa-twitter"></i></p></li>
+      <li><p class="link" onclick="openLink('reddit')"><i class="fab fa-reddit"></i></p></li>
+      <li><p class="link" onclick="openLink('telegram')"><i class="fab fa-telegram"></i></p></li>
     </ul>
   </div>
 </div>
@@ -73,9 +73,11 @@
   <!-- end layer -->
   <div class="inner">
     <ul>
-      <li><a href="https://t.me/joinchat/TRBISC23wI03YWU1">Telegram</a></li>
-      <li><a href="https://bscscan.com/address/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6">Contract</a></li>
-      <li><a href="https://poocoin.app/tokens/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6">Chart</a></li>
+      <li><p onclick="openLink('telegram')">Telegram</p></li>
+      <li><p onclick="openLink('https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0D6A59cEF44BaC622e91313B366C7F802b2670D6')">Buy by Pancake</p></li>
+      <li><p onclick="openLink('https://bscscan.com/address/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6')">Contract</p></li>
+      <li><p onclick="openLink('https://poocoin.app/tokens/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6')">Chart</p></li>
+      
     </ul>
   </div>
   <!-- end inner --> 
@@ -227,9 +229,9 @@
         </div>
         <!-- end col-5 -->
         <div class="col-lg-7 iconWrap">
-            <a href="https://twitter.com/ggininderbsc"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.reddit.com/r/GGinindertoken/"><i class="fab fa-reddit"></i></a>
-            <a href="https://t.me/joinchat/TRBISC23wI03YWU1"><i class="fab fa-telegram"></i></a>
+            <p onclick="openLink('twitter')"><i class="fab fa-twitter"></i></p>
+            <p onclick="openLink('reddit')"><i class="fab fa-reddit"></i></p>
+            <p onclick="openLink('telegram')"><i class="fab fa-telegram"></i></p>
          
 
             <!-- <li class="reveal-effect masker wow"> <img src="images/comingsoon.png" alt="Image"> </li>
@@ -257,9 +259,9 @@
     <div class="row">
       <div class="col-12">
         <ul>
-          <li><a href="https://twitter.com/ggininderbsc"><i class="fab fa-twitter"></i></a></li>
-          <li><a onclick="copy()"><i class="fab fa-reddit"></i></a></li>
-          <li><a href="https://t.me/joinchat/TRBISC23wI03YWU1"><i class="fab fa-telegram"></i></a></li>
+          <li><p onclick="openLink('twitter')"><i class="fab fa-twitter"></i></p></li>
+          <li><p onclick="openLink('reddit')"><i class="fab fa-reddit"></i></p></li>
+          <li><p onclick="openLink('telegram')"><i class="fab fa-telegram"></i></p></li>
         </ul>
         <h6>LET'S JOIN OUR COMMUNITY.</h6>
         <h2>Need more information or want <br>
@@ -289,6 +291,28 @@
       copyText.blur();
       /* Alert the copied text */
       swal("Success!", "Copied the text: " + copyText.value,"success")
+    }
+    function openLink(webUrl){
+      const twitter = 'https://twitter.com/ggininderbsc'
+      const reddit = 'https://www.reddit.com/r/GGinindertoken/'
+      const telegram = 'https://t.me/joinchat/TRBISC23wI03YWU1'
+      let url;
+      switch (webUrl) {
+        case 'twitter':
+            url = twitter
+          break;
+        case 'reddit':
+          url = reddit;
+          break;
+        case 'telegram':
+          url =  telegram  
+         break;
+        default:
+          url = webUrl;
+          break;
+      }
+      const mywin = window.open('about:blank', 'redirect')
+      mywin.open(url, 'redirect')
     }
 </script>
 <!-- JS FILES --> 

@@ -754,7 +754,13 @@ textarea {
 .social-media.active .inner {
   opacity: 1;
 }
-
+.social-media .inner .link {
+  color: #fff;
+}
+.social-media .inner .link:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
 /* ALL CASES */
 .all-cases {
   width: 100%;
@@ -816,18 +822,18 @@ textarea {
   padding: 0;
 }
 .all-cases .inner ul li {
-  font-size: 8vw;
+  font-size: 5rem;
   font-weight: 800;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.all-cases .inner ul li a {
+.all-cases .inner ul li p {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
   color: transparent;
 }
-.all-cases .inner ul li a:hover {
+.all-cases .inner ul li p:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -2265,13 +2271,15 @@ textarea {
   align-items: center;
   justify-content: space-around;
 }
-.iconWrap a {
+.iconWrap p {
   font-size: 2.5rem;
   margin: 2rem;
 }
-.iconWrap a:hover {
+.iconWrap p:hover {
   font-size: 3rem;
   filter: contrast(0.5);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 /* CONTACT */
@@ -2419,12 +2427,13 @@ textarea {
   display: inline-block;
   margin-left: 10px;
 }
-.footer ul li a {
+.footer ul li p {
   color: #fff;
   font-size: 13px;
 }
-.footer ul li a:hover {
+.footer ul li p:hover {
   color: #75dab4;
+  cursor: pointer;
 }
 .footer h6 {
   font-family: "Fjalla One", sans-serif;
