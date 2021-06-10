@@ -2647,6 +2647,9 @@ textarea {
 /* RESPONSIVE TABLET FIXES */
 @media only screen and (max-width: 991px),
   only screen and (max-device-width: 991px) {
+  .content .lp {
+    width: 85%;
+  }
   .valueDefi .yt-wrap iframe {
     width: 100%;
   }
