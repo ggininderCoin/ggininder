@@ -112,6 +112,9 @@
             }
 
         });
+        $('.defi').on('click', () => {
+            $('html,body').animate({ scrollTop: $('#valueDefi').offset().top }, 800);
+        })
 
 
 

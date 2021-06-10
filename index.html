@@ -94,7 +94,7 @@
     <!-- end equalizer --> 
   </aside>
   <!-- end left-side -->
-  <div class="all-cases-link"> <span>SHORTCUT</span> <b>+</b> </div>
+  <div class="all-cases-link "> <span class="defi"> ValueDEFI </span>  <b>+</b> </div>
   <!-- end all-cases-link -->
   <header class="video-hero">
    <div class="video-bg">
@@ -137,7 +137,20 @@
     <!-- end container --> 
   </section>
   <!-- end intro -->
-  <section class="intro-image">
+  <div class="valueDefi" id="valueDefi">
+    <h1>Tutorials</h1>
+    <div class="yt-wrap">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Os5BaIenPrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="btn-wrap">
+      <button type="button" class="bubbly-button" onclick="toPage('/Tutorials')">More</button>
+    </div>
+    <!-- <h1 class="first">First you have to go to <span class="link">pancake</span> to exchange for lp token</h1>
+    <div class="lp-wrap">
+      <img src="images/lp.png" alt="lp">
+    </div> -->
+  </div>
+  <!-- <section class="intro-image">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -158,20 +171,13 @@
                   <img src="images/SpongeBob.jpeg" alt="Image">
                 </figure>
               </div>
-              <!-- end swiper-slide -->
             </div>
-            <!-- end swiper-wrapper -->
             <div class="swiper-pagination"></div>
-            <!-- end swiper-pagination --> 
           </div>
-          <!-- end office-slider --> 
         </div>
-        <!-- end col-12 --> 
       </div>
-      <!-- end row --> 
     </div>
-    <!-- end container --> 
-  </section>
+  </section> -->
   <!-- end intro-image -->
   <section class="icon-content-block">
     <div class="container">
@@ -252,6 +258,7 @@
     <!-- end container --> 
   </section>
   <!-- end clients --> 
+  
 </main>
 <!-- end main -->
 <footer class="footer">
@@ -281,6 +288,9 @@
 <!-- end footer -->
 
 <script>
+  function toPage(page) {
+    window.location.href = page +'.html'
+  }
   function copy() {
       /* Get the text field */
       let copyText = document.getElementById("myAdd");
