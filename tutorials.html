@@ -39,6 +39,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/sweetalert.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tutotials.css">
 </head>
 <body>
 <div class="preloader">
@@ -89,45 +90,76 @@
     <div class="logoTitle"> GGININDER - Tutorials</div>
   </header>
   <div class="content">
-    <h1>Step 1</h1>
-    <h3> Open <span class="pancakeLink" onclick="openLink('https://exchange.pancakeswap.finance/#/add/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6')"> PancakeSwap(Link) </span> </h2>
-    <h3>Approve GGININDER And Supply</h3>
-    <div class="img-wrap">
-      <img class="lp" src="images/lp.png" alt="lp">
+    <div class="wrapper">
+      <div class="taeb-switch left text-center">
+        <div onclick="changeView('farms')" class="taeb" taeb-direction="left">Farms</div>
+        <div onclick="changeView('pools')" class="taeb" taeb-direction="right">Pools</div>
+      </div>
     </div>
-    <h1>Step 2</h2>
-    <h3> Open <span class="Link" onclick="openLink('https://bsc.valuedefi.io/#/vfarm/0x3cf906e610d814918d242d27faa0129c0492f197')"> Value Defi(Link) </span> </h2>
-    <h3>Click Stake</h3>
-    <div class="img-wrap">
-      <img class="lp" src="images/stake.png" alt="stake">
+    <div class="farms-wrap">
+      <h1>Step 1</h1>
+      <h3> Open <span class="pancakeLink" onclick="openLink('https://exchange.pancakeswap.finance/#/add/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/0x0D6A59cEF44BaC622e91313B366C7F802b2670D6')"> PancakeSwap(Link) </span> </h2>
+      <h3>Approve GGININDER And Supply</h3>
+      <div class="img-wrap">
+        <img class="lp" src="images/lp.png" alt="lp">
+      </div>
+      <h1>Step 2</h2>
+      <h3> Open <span class="Link" onclick="openLink('https://bsc.valuedefi.io/#/vfarm/0x3cf906e610d814918d242d27faa0129c0492f197')"> Value Defi(Link) </span> </h2>
+      <h3>Click Stake</h3>
+      <div class="img-wrap">
+        <img class="lp" src="images/stake.png" alt="stake">
+      </div>
+      <h1>Step 3</h1>
+      <h2>Successfully enjoy making money 🎉🎉🎉</h2>
     </div>
-    <h1>Step 3</h1>
-    <h2>Successfully enjoy making money 🎉🎉🎉</h2>
+    <div class="pools-wrap">
+      <h1>Step 1</h1>
+        <h3> Open <span class="Link" onclick="openLink('https://bsc.valuedefi.io/#/vfarm/0x75d8118b588af347d647dd73c794c030e3e42d87')"> Value Defi(Link) </span> </h2>
+          <h3>Approve and Click Stake</h3>
+      <div class="img-wrap">
+        <img class="lp" src="images/pools.png" alt="stake">
+      </div>
+      <h1>Step 2</h1>
+      <h2>Successfully enjoy making money 🎉🎉🎉</h2>
+    </div>
+
   </div>
 </main>
 
 <script>
-      function openLink(webUrl){
-      const twitter = 'https://twitter.com/ggininderbsc'
-      const reddit = 'https://www.reddit.com/r/GGinindertoken/'
-      const telegram = 'https://t.me/joinchat/TRBISC23wI03YWU1'
-      let url;
-      switch (webUrl) {
-        case 'twitter':
-            url = twitter
-          break;
-        case 'reddit':
-          url = reddit;
-          break;
-        case 'telegram':
-          url =  telegram  
-         break;
-        default:
-          url = webUrl;
-          break;
+      function changeView(view){
+        let queryParams = new URLSearchParams(window.location.search);
+        queryParams.set("tab", view);
+        history.replaceState(null, null, "?"+queryParams.toString());
+        if(view === 'pools'){
+          $('.farms-wrap').css("display", "none")
+          $('.pools-wrap').css("display", "block")
+        }else{
+          $('.pools-wrap').css("display", "none")
+          $('.farms-wrap').css("display", "block")
+        }
       }
-      const mywin = window.open('about:blank', 'redirect')
-      mywin.open(url, 'redirect')
+      function openLink(webUrl){
+          const twitter = 'https://twitter.com/ggininderbsc'
+          const reddit = 'https://www.reddit.com/r/GGinindertoken/'
+          const telegram = 'https://t.me/joinchat/TRBISC23wI03YWU1'
+          let url;
+          switch (webUrl) {
+            case 'twitter':
+                url = twitter
+              break;
+            case 'reddit':
+              url = reddit;
+              break;
+            case 'telegram':
+              url =  telegram  
+            break;
+            default:
+              url = webUrl;
+              break;
+          }
+          const mywin = window.open('about:blank', 'redirect')
+          mywin.open(url, 'redirect')
     }
 </script>
 <!-- JS FILES --> 

@@ -247,8 +247,16 @@
 
     });
     // END JQUERY	
-
-
+    // console.log("window loaded", )
+    const urlParams = getUrlParameter('tab')
+    console.log('urlParams: ', urlParams);
+    if (urlParams === 'farms') {
+        $('.taeb-switch').addClass('left')
+        $('.pools-wrap').css("display", "none")
+    } else if (urlParams === 'pools') {
+        $('.taeb-switch').addClass('right')
+        $('.farms-wrap').css("display", "none")
+    }
 
     // SLIDER
     var mainslider = new Swiper('.gallery-top', {
@@ -402,7 +410,34 @@
     );
     wow.init();
 
+    // tutorials 
+    const taeb = $(".taeb-switch");
+    taeb.find(".taeb").on("click", function () {
+        const $this = $(this);
 
+        if ($this.hasClass("active")) return;
+
+        const direction = $this.attr("taeb-direction");
+
+        taeb.removeClass("left right").addClass(direction);
+        taeb.find(".taeb.active").removeClass("active");
+        $this.addClass("active");
+    });
+
+    function getUrlParameter(sParam) {
+        let sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
 
 
     // PRELOADER

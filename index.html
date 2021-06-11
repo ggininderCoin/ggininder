@@ -140,11 +140,25 @@
   <div class="valueDefi" id="valueDefi">
     <h1>Tutorials</h1>
     <div class="yt-wrap">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Os5BaIenPrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="btn-wrap">
-      <button type="button" class="bubbly-button" onclick="toPage('/tutorials')">More</button>
-    </div>
+      <div class="leftYT">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Os5BaIenPrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>
+          Farms
+        </p>
+        <div class="btn-wrap">
+          <button  type="button" class="custom-btn btn-12" onclick="toPage('/tutorials.html?tab=farms')"><span>Click!</span><span>Read More</span></button>
+        </div>
+      </div>
+      <div class="rightYT">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/P4L4dr29YpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <p>
+          Pools
+        </p>
+        <div class="btn-wrap">
+          <button  type="button" class="custom-btn btn-12" onclick="toPage('/tutorials.html?tab=pools')"><span>Click!</span><span>Read More</span></button>
+        </div>
+     </div>
+    </div>      
     <!-- <h1 class="first">First you have to go to <span class="link">pancake</span> to exchange for lp token</h1>
     <div class="lp-wrap">
       <img src="images/lp.png" alt="lp">
@@ -289,7 +303,7 @@
 
 <script>
   function toPage(page) {
-    window.location.href = page +'.html'
+    window.location.href = page 
   }
   function copy() {
       /* Get the text field */
